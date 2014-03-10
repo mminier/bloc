@@ -31,7 +31,7 @@ void Encrypt ( u64 text[], u64 crypt[], u64 key[] )
     }
 }
 
-void Decrypt ( u16 text[], u16 crypt[], u16 key[] )
+void Decrypt ( u64 text[], u64 crypt[], u64 key[] )
 {
     u8 i;
     crypt[0] = text[0];
