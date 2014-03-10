@@ -28,7 +28,7 @@ void Encrypt ( u32 text[], u32 crypt[], u32 key[] )
     }
 }
 
-void Decrypt ( u16 text[], u16 crypt[], u16 key[] )
+void Decrypt ( u32 text[], u32 crypt[], u32 key[] )
 {
     u8 i;
     crypt[0] = text[0];
@@ -37,7 +37,7 @@ void Decrypt ( u16 text[], u16 crypt[], u16 key[] )
     for ( i=0 ; i<27 ; i++ )
     {
         crypt[1] = ROTATE_RIGHT_32( crypt[0] ^ crypt[1], 3);
-        crypt[0] = ROTATE_LEFT_32( (crypt[0] ^ key[25-i]) - crypt[1], 8 );
+        crypt[0] = ROTATE_LEFT_32( (crypt[0] ^ key[26-i]) - crypt[1], 8 );
     }
 }
 
